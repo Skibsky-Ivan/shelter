@@ -1,0 +1,219 @@
+.intro {
+  padding-block: 30px 0;
+  background: url(../Pictures/start-screen-gradient-background.png) no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.intro .container {
+  flex-direction: column;
+  gap: 90px;
+}
+
+/* =============== Header styles start =================== */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo styles start */
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  text-align: center;
+}
+
+.logo-title {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+
+.logo-subtitle {
+  font-family: var(--font-family-additional);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  color: var(--color-light-xl);
+}
+/* logo styles end */
+
+/* nav styles start */
+.header-menu-list {
+  display: flex;
+  column-gap: 35px;
+  list-style: none;
+  color: var(--color-dark-s);
+}
+
+.header-menu-link {
+  color: var(--color-dark-s);
+}
+
+.header-menu-link.is-current {
+  color: var(--color-light-s);
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.header-burger-menu {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  row-gap: 10px;
+}
+
+.header-burger-menu-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+/* nav styles end */
+/* =============== Header styles end ===================== */
+
+/* ============ not_only styles start ==================== */
+.not_only {
+  display: flex;
+  justify-content: space-between;
+}
+
+.not_only-content {
+  margin-top: 163px;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+}
+
+.not_only-title {
+  color: var(--color-light-xl);
+}
+
+.not_only-text {
+  color: var(--color-dark-s);
+}
+
+.not_only-img {
+  max-width: 100%;
+  transform: translate(19px, -23px);
+}
+/* ============ not_only ctyles end ====================== */
+
+/* ============= about ctyles start ====================== */
+.about .container {
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+
+.about .content {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+/* ============= about ctyles end ======================== */
+
+/* =========== our friend ctyles start =================== */
+.our_friend {
+  background: var(--color-light-l);
+}
+
+.our_friend .container {
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  text-align: center;
+}
+
+.our_friend .slider {
+  display: flex;
+  gap: 53px;
+}
+
+.our_friend .slider .cards_container {
+  display: flex;
+  gap: 90px;
+}
+
+.our_friend .slider .pet_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: var(--color-light-s);
+}
+
+/* =========== our friend ctyles end ===================== */
+
+@media (max-width: 1100px) {
+  .intro .container {
+    align-items: center;
+  }
+  .not_only {
+    max-width: 569px;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+  .not_only-content {
+    margin-top: 0;
+  }
+  .not_only-content .button-primary {
+    align-self: center;
+  }
+  .not_only-img {
+    transform: translate(0, 0);
+    margin-left: clamp(70px, -45.66px + 15.06vw, 120px);
+  }
+}
+
+@media (max-width: 800px) {
+  .not_only-img {
+    width: clamp(260px, 39.31px + 68.97vw, 569px);
+  }
+}
+
+@media (max-width: 768px) {
+  .intro .container {
+    align-items: center;
+  }
+  .not_only {
+    flex-direction: column;
+  }
+  .not_only-img {
+    margin-left: clamp(40px, 18.56px + 6.7vw, 70px);
+  }
+}
+
+@media (max-width: 720px) {
+  .header-menu {
+    display: none;
+  }
+  .header-burger-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .not_only-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .not_only-title {
+    font-size: clamp(1.56rem, -3.2rem + 23.8vw, 2.75rem);
+  }
+}
