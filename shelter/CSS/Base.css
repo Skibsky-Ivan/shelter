@@ -274,8 +274,8 @@ input {
 
 .container {
   max-width: var(--container-width);
-  display: flex;
   margin: 0 auto;
+  display: flex;
 }
 
 .visually-hidden {

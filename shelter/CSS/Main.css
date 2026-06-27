@@ -1,8 +1,11 @@
 .intro {
-  padding-block: 30px 0;
   background: url(../Pictures/start-screen-gradient-background.png) no-repeat;
   background-size: cover;
   background-position: center top;
+}
+
+.intro.wrapper {
+  padding-block: 30px 0;
 }
 
 .intro .container {
@@ -19,6 +22,7 @@
 }
 
 /* logo styles start */
+
 .header-logo {
   display: flex;
   flex-direction: column;
@@ -131,33 +135,51 @@
 }
 
 .our_friend .container {
-  flex-direction: column;
   gap: 60px;
+  flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.our_friend .slider {
+.our_friend-slider {
+  width: 100%;
   display: flex;
-  gap: 53px;
+  gap: clamp(30px, -52.09px + 8.21vw, 53px);
+  align-items: center;
 }
 
-.our_friend .slider .cards_container {
+.our_friend-slider-button {
+  width: 52px;
+  height: 52px;
+  padding: 0;
   display: flex;
-  gap: 90px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.our_friend .slider .pet_card {
+.our_friend-slider-cards_container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.our_friend-slider-card {
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   background: var(--color-light-s);
+  border-radius: 9px;
+  overflow: hidden;
 }
 
 /* =========== our friend ctyles end ===================== */
 
 @media (max-width: 1100px) {
+  /* intro */
   .intro .container {
     align-items: center;
     gap: clamp(60px, -20px + 10vw, 90px);
@@ -180,11 +202,23 @@
   }
 }
 
+@media (max-width: 1000px) {
+  /* .our_friend */
+  .our_friend-slider {
+    gap: clamp(13px, -208.8px + 28.88vw, 80px);
+  }
+  .our_friend-slider-card:nth-child(3) {
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
+  /* intor */
   .not_only-img {
     width: clamp(260px, 39.31px + 68.97vw, 569px);
   }
 
+  /* about */
   .about .container {
     flex-direction: column;
     gap: clamp(42px, 14.87px + 8.48vw, 80px);
@@ -195,6 +229,7 @@
 }
 
 @media (max-width: 768px) {
+  /* intro */
   .intro .container {
     align-items: center;
   }
@@ -207,34 +242,57 @@
 }
 
 @media (max-width: 720px) {
+  /* intro */
   .header-menu {
     display: none;
   }
   .header-burger-menu {
     display: flex;
   }
+
+  .our_friend-slider {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    justify-items: center;
+    row-gap: 1.25rem;
+  }
+  .our_friend-slider-cards_container {
+    grid-column: 1 / span 2;
+    grid-row: 1; 
+    justify-content: center;
+  }
+  .our_friend-slider-card:nth-child(2) {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
+  /* intro */
   .not_only-content {
     text-align: center;
   }
 
+  /* base */
   .wrapper {
     padding-block: 42px;
   }
 }
 
 @media (max-width: 400px) {
+  /* intro */
   .not_only-title {
     font-size: clamp(1.56rem, -3.2rem + 23.8vw, 2.75rem);
     letter-spacing: 0.06em;
   }
+
+  /* base */
   .header_3 {
     font-size: clamp(1.56rem, -15.36px + 12.6vw, 2.19rem);
     text-align: center;
   }
 
+  /* about */
   .about-img {
     width: clamp(260px, 40px + 68.75vw, 315px);
   }
