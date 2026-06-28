@@ -317,15 +317,14 @@ input {
 .header_5 {
   font-family: var(--font-family-base);
   font-weight: 400;
-  font-size: 0.94rem;
+  font-size: 0.9375rem;
   line-height: 1.1;
-  letter-spacing: 0.06em;
 }
 
 .paragraph_l {
   font-family: var(--font-family-additional);
   font-weight: 400;
-  font-size: 0.94rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
 }
 
