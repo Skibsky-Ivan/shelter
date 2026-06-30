@@ -29,6 +29,9 @@
   background-color: #000;
 }
 
+.header-burger-menu.active .header-burger-menu-line {
+  background-color: var(--color-primary);
+}
 /* =============== Our Friends Slider Styles ===================== */
 .our-friend .container {
   gap: 2.8125rem;

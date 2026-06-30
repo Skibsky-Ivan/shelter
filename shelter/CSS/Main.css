@@ -180,9 +180,6 @@
   .our-friend-slider {
     gap: clamp(0.81rem, -13.05rem + 28.88vw, 5rem);
   }
-  .our-friend-slider-card:nth-child(3) {
-    display: none;
-  }
   .about .container {
     flex-direction: column;
     gap: clamp(2.63rem, 0.93rem + 8.48vw, 5rem);
@@ -224,13 +221,9 @@
     justify-items: center;
     row-gap: 1.25rem;
   }
-  .our-friend-slider-cards-container {
+  .our-friend-slider-viewport {
     grid-column: 1 / span 2;
     grid-row: 1;
-    justify-content: center;
-  }
-  .our-friend-slider-card:nth-child(2) {
-    display: none;
   }
   .help-list {
     max-width: 18.13rem;
