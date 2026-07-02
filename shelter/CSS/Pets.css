@@ -32,39 +32,61 @@
 .header-burger-menu.active .header-burger-menu-line {
   background-color: var(--color-primary);
 }
+
 /* =============== Our Friends Slider Styles ===================== */
+
 .our-friend .container {
   gap: 2.8125rem;
 }
 
 .our-friend-slider {
   flex-direction: column;
+  gap: 2.8125rem;
 }
 
-.our-friend-slider-cards-container {
+.our-friend-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.our-friend-slider-track {
+  display: flex;
+  width: 100%;
+  gap: 0;
+}
+
+.our-friend-slider-track-block {
+  flex: 0 0 100%;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, 16.875rem);
   justify-content: center;
-  width: 100%;
+
   gap: 1.875rem 2.5rem;
 }
 
 .our-friend-slider-nav {
   display: flex;
-  column-gap: 1.25rem;
+  justify-content: center;
+  gap: 1.25rem;
 }
 
 .our-friend-slider-nav-page {
-  padding: 0;
-  width: 3.25rem;
-  height: 3.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
+
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+
   border-radius: 50%;
   border: var(--border);
-  transition: all var(--transition-duration);
+  border-color: var(--color-primary-light);
+
+  background: var(--color-primary-light);
+
+  transition: var(--transition-duration);
 }
 
 .our-friend-slider-button.inactive {
@@ -74,19 +96,7 @@
 
 @media (any-hover: hover) {
   .our-friend-slider-button.inactive:hover {
-    background-color: transparent;
+    background: transparent;
     border-color: var(--color-dark-s);
-  }
-}
-
-.our-friend-slider-nav-page.active {
-  background-color: var(--color-primary-light);
-  border-color: var(--color-primary-light);
-}
-
-@media (any-hover: hover) {
-  .our-friend-slider-nav-page:hover {
-    background-color: var(--color-primary-light);
-    border-color: var(--color-primary-light);
   }
 }

@@ -49,7 +49,9 @@
               </a>
             </li>
             <li class="header-burger-menu-item">
-              <a class="header-burger-menu-link is-current" href="./Pets.html">Our pets</a>
+              <a class="header-burger-menu-link is-current" href="./Pets.html"
+                >Our pets</a
+              >
             </li>
             <li class="header-burger-menu-item">
               <a class="header-burger-menu-link" href="./Main.html#help">
@@ -71,95 +73,36 @@
             Our friends who<br />
             are looking for a house
           </h2>
-          <div class="our-friend-slider slider-cards">
-            <div class="our-friend-slider-cards-container">
-              <div class="our-friend-slider-card">
-                <img
-                  src="../Pictures/pets/pets-katrine.png"
-                  alt="Katrine"
-                  class="our-friend-slider-card-img" />
-                <h3 class="header-4">Katrine</h3>
-                <button class="button-secondary">Learn more</button>
-              </div>
-              <div class="our-friend-slider-card">
-                <img
-                  src="../Pictures/pets/pets-katrine.png"
-                  alt="Jennifer"
-                  class="our-friend-slider-card-img" />
-                <h3 class="header-4">Jennifer</h3>
-                <button class="button-secondary">Learn more</button>
-              </div>
-              <div class="our-friend-slider-card">
-                <img
-                  src="../Pictures/pets/pets-katrine.png"
-                  alt="Woody"
-                  class="our-friend-slider-card-img" />
-                <h3 class="header-4">Woody</h3>
-                <button class="button-secondary">Learn more</button>
-              </div>
-              <div class="our-friend-slider-card">
-                <img
-                  src="../Pictures/pets/pets-katrine.png"
-                  alt="Woody"
-                  class="our-friend-slider-card-img" />
-                <h3 class="header-4">Woody</h3>
-                <button class="button-secondary">Learn more</button>
-              </div>
-              <div class="our-friend-slider-card">
-                <img
-                  src="../Pictures/pets/pets-katrine.png"
-                  alt="Woody"
-                  class="our-friend-slider-card-img" />
-                <h3 class="header-4">Woody</h3>
-                <button class="button-secondary">Learn more</button>
-              </div>
-              <div class="our-friend-slider-card">
-                <img
-                  src="../Pictures/pets/pets-katrine.png"
-                  alt="Woody"
-                  class="our-friend-slider-card-img" />
-                <h3 class="header-4">Woody</h3>
-                <button class="button-secondary">Learn more</button>
-              </div>
-              <div class="our-friend-slider-card">
-                <img
-                  src="../Pictures/pets/pets-katrine.png"
-                  alt="Woody"
-                  class="our-friend-slider-card-img" />
-                <h3 class="header-4">Woody</h3>
-                <button class="button-secondary">Learn more</button>
-              </div>
-              <div class="our-friend-slider-card">
-                <img
-                  src="../Pictures/pets/pets-katrine.png"
-                  alt="Woody"
-                  class="our-friend-slider-card-img" />
-                <h3 class="header-4">Woody</h3>
-                <button class="button-secondary">Learn more</button>
-              </div>
+          <div class="our-friend-slider">
+            <div class="our-friend-slider-viewport slider-cards">
+              <div class="our-friend-slider-track"></div>
             </div>
             <nav class="our-friend-slider-nav">
               <button
-                class="our-friend-slider-button inactive button-secondary"
-                title="First page">
+                class="our-friend-slider-button button-secondary"
+                title="First page"
+                data-action="first-slide">
                 <<
               </button>
               <button
-                class="our-friend-slider-button inactive button-secondary"
-                title="Previous  page">
+                class="our-friend-slider-button button-secondary"
+                title="Previous  page"
+                data-action="prev-slide">
                 <
               </button>
-              <span class="our-friend-slider-nav-page active header-4">
+              <span class="our-friend-slider-nav-page header-4">
                 1
               </span>
               <button
                 class="our-friend-slider-button button-secondary"
-                title="Next page">
+                title="Next page"
+                data-action="next-slide">
                 >
               </button>
               <button
                 class="our-friend-slider-button button-secondary"
-                title="Last page">
+                title="Last page"
+                data-action="last-slide">
                 >>
               </button>
             </nav>
@@ -242,7 +185,14 @@
       </div>
     </footer>
 
-    <script src="../JS/Base.js"></script>
-    <script src="../JS/Pets.js"></script>
+    <div class="popup-overfloy">
+      <div class="popup">
+        <button class="popup-close"></button>
+        <div class="popup-content"></div>
+      </div>
+    </div>
+
+    <script src="../JS/Base.js" type="module"></script>
+    <script src="../JS/Pets.js" type="module"></script>
   </body>
 </html>
