@@ -1,0 +1,280 @@
+/* =============== Header Styles ===================== */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* =============== Intro Styles ===================== */
+.intro {
+  background: url(../Pictures/start-screen-gradient-background.png) no-repeat
+    center top / cover;
+  padding-top: 11.25rem; /* Сдвиг контента вниз из-за абсолютного хедера */
+}
+
+.intro.wrapper {
+  padding-bottom: 0;
+}
+
+.intro .container {
+  flex-direction: column;
+}
+
+.not-only {
+  display: flex;
+  justify-content: space-between;
+}
+
+.not-only-content {
+  padding-top: clamp(4.5rem, -15.81rem + 32.5vw, 10.19rem);
+  width: min(100%, 28.75rem);
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.63rem;
+}
+
+.not-only-title {
+  color: var(--color-light-xl);
+}
+
+.not-only-text {
+  color: var(--color-dark-s);
+}
+
+.not-only-img {
+  transform: translate(1.19rem, -1.44rem);
+}
+
+/* =============== About Styles ===================== */
+.about .container {
+  justify-content: center;
+  align-items: center;
+  gap: 7.5rem;
+}
+
+.about-content {
+  max-width: 26.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: justify;
+}
+
+/* =============== Help Styles ===================== */
+.help {
+  background: var(--color-light-xl);
+  text-align: center;
+}
+
+.help .container {
+  gap: 3.75rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help-list {
+  max-width: 64.31rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.44rem 7.5rem;
+}
+
+.help-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.88rem;
+}
+
+/* =============== Donation Styles ===================== */
+.donation {
+  background: var(--color-light-l);
+}
+
+.donation.wrapper {
+  padding-inline: 1.25rem;
+}
+
+.donation-container {
+  gap: 1.88rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.donation-content {
+  max-width: 23.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 1.25rem;
+}
+
+.donation-text {
+  color: var(--color-dark-m);
+}
+
+.donation-button {
+  position: relative;
+  padding-block: 0.63rem;
+  padding-inline: 3.75rem 0.94rem;
+  background: var(--color-primary);
+  border-radius: 0.5rem;
+  font-size: clamp(0.9375rem, 1.12vw + 0.71rem, 1.25rem);
+  color: var(--color-dark-l);
+  transition-duration: var(--transition-duration);
+}
+
+.donation-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.94rem;
+  width: 1.88rem;
+  height: 1.44rem;
+  background: url(../Pictures/icons/credit-card.svg) no-repeat center / contain;
+  transform: translateY(-50%);
+}
+
+@media (any-hover: hover) {
+  .donation-button:hover {
+    background-color: var(--color-primary-light);
+  }
+}
+
+/* =============== Media Queries ===================== */
+@media (max-width: 80rem) {
+  .our-friend-slider-viewport {
+    width: calc(
+      16.875rem * 2 + clamp(2.5rem, -2.1875rem + 9.7656vw, 5.625rem)
+    );
+  }
+}
+
+@media (max-width: 68.75rem) {
+  /* 1100px */
+  .help-list {
+    max-width: 39.38rem;
+    column-gap: 3.75rem;
+  }
+  .help-list-item {
+    width: 10.62rem;
+  }
+}
+
+@media (max-width: 62.5rem) {
+  /* 1000px */
+  .intro .container {
+    align-items: center;
+    gap: clamp(3.75rem, -1.25rem + 10vw, 5.63rem);
+  }
+  .not-only {
+    max-width: 35.56rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.25rem;
+  }
+  .not-only-content {
+    padding-top: 0;
+  }
+  .not-only-content .button-primary {
+    align-self: center;
+  }
+  .not-only-img {
+    transform: translate(0, 0);
+    margin-left: clamp(4.38rem, -2.85rem + 15.06vw, 7.5rem);
+  }
+  .our-friend-slider {
+    gap: clamp(0.81rem, -13.05rem + 28.88vw, 5rem);
+  }
+  .about .container {
+    flex-direction: column;
+    gap: clamp(2.63rem, 0.93rem + 8.48vw, 5rem);
+  }
+  .about-img-wrapper {
+    order: 1;
+  }
+  .donation .container {
+    flex-direction: column;
+  }
+  .donation-img-container {
+    order: 1;
+  }
+}
+
+@media (max-width: 50rem) {
+  /* 800px */
+  .not-only-img {
+    width: clamp(16.25rem, 2.46rem + 68.97vw, 35.56rem);
+  }
+}
+
+@media (max-width: 48rem) {
+  /* 768px */
+  .not-only-img {
+    margin-left: clamp(2.5rem, 1.16rem + 6.7vw, 4.38rem);
+  }
+  .donation-text {
+    text-align: justify;
+  }
+  .our-friend-slider {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    justify-items: center;
+    row-gap: 1.25rem;
+  }
+  .our-friend-slider-viewport {
+    width: 16.875rem;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 45rem) {
+  /* 720px */
+  .help-list {
+    max-width: 18.13rem;
+    justify-content: start;
+    gap: 1.88rem;
+  }
+  .help-list-item {
+    width: 8.12rem;
+    row-gap: 1.25rem;
+  }
+  .help-item-title {
+    font-size: 0.94rem;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  /* 600px */
+  .not-only-content {
+    padding-top: 7.5rem;
+    text-align: center;
+  }
+  .wrapper {
+    padding-block: 2.63rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  /* 400px */
+  .not-only-title {
+    font-size: clamp(1.56rem, -3.2rem + 23.8vw, 2.75rem);
+    letter-spacing: 0.06em;
+  }
+  .header-3 {
+    font-size: clamp(1.56rem, -0.96rem + 12.6vw, 2.19rem);
+    text-align: center;
+  }
+  .about-img {
+    width: clamp(16.25rem, 2.5rem + 68.75vw, 19.69rem);
+  }
+  .donation-content {
+    text-align: center;
+    align-items: center;
+  }
+}
