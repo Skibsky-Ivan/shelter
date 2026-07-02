@@ -126,15 +126,15 @@
           </h2>
           <div class="our-friend-slider">
             <button
-              class="our-friend-slider-button button-secondary"
+              class="our-friend-slider-button prev-btn button-secondary"
               title="Previous pet">
               <img src="../Pictures/icons/slider-left-button.svg" alt="" />
             </button>
-            <div class="our-friend-slider-viewport">
-              <div class="our-friend-slider-track" id="slider-track"></div>
+            <div class="our-friend-slider-viewport slider-cards">
+              <div class="our-friend-slider-track"></div>
             </div>
             <button
-              class="our-friend-slider-button button-secondary"
+              class="our-friend-slider-button next-btn button-secondary"
               title="Next pet">
               <img src="../Pictures/icons/slider-right-button.svg" alt="" />
             </button>
@@ -296,7 +296,14 @@
       </div>
     </footer>
 
+    <div class="popup-overfloy">
+      <div class="popup">
+        <button class="popup-close"></button>
+        <div class="popup-content"></div>
+      </div>
+    </div>
+
     <script src="../JS/Base.js"></script>
-    <script src="../JS/Main.js"></script>
+    <script src="../JS/Main.js" type="module"></script>
   </body>
 </html>

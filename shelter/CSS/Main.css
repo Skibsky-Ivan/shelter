@@ -144,6 +144,14 @@
 }
 
 /* =============== Media Queries ===================== */
+@media (max-width: 80rem) {
+  .our-friend-slider-viewport {
+    width: calc(
+      16.875rem * 2 + clamp(2.5rem, -2.1875rem + 9.7656vw, 5.625rem)
+    );
+  }
+}
+
 @media (max-width: 68.75rem) {
   /* 1100px */
   .help-list {
@@ -210,10 +218,6 @@
   .donation-text {
     text-align: justify;
   }
-}
-
-@media (max-width: 45rem) {
-  /* 720px */
   .our-friend-slider {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -222,9 +226,14 @@
     row-gap: 1.25rem;
   }
   .our-friend-slider-viewport {
+    width: 16.875rem;
     grid-column: 1 / span 2;
     grid-row: 1;
   }
+}
+
+@media (max-width: 45rem) {
+  /* 720px */
   .help-list {
     max-width: 18.13rem;
     justify-content: start;
