@@ -1,0 +1,102 @@
+/* =============== Header Styles ===================== */
+.header {
+  padding-block: 1.87rem;
+}
+
+.logo-title {
+  color: var(--color-dark-l);
+}
+
+.logo-subtitle {
+  color: var(--color-dark-3xl);
+}
+
+.header-menu-link {
+  color: var(--color-dark-l);
+}
+
+@media (any-hover: hover) {
+  .header-menu-link:hover {
+    color: var(--color-dark-l);
+  }
+}
+
+.header-menu-link.is-current {
+  color: var(--color-dark-3xl);
+}
+
+.header-burger-menu-line {
+  background-color: #000;
+}
+
+.header-burger-menu.active .header-burger-menu-line {
+  background-color: var(--color-primary);
+}
+
+/* =============== Our Friends Slider Styles ===================== */
+
+.our-friend .container {
+  gap: 2.8125rem;
+}
+
+.our-friend-slider {
+  flex-direction: column;
+  gap: 2.8125rem;
+}
+
+.our-friend-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.our-friend-slider-track {
+  display: flex;
+  width: 100%;
+  gap: 0;
+}
+
+.our-friend-slider-track-block {
+  flex: 0 0 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 16.875rem);
+  justify-content: center;
+
+  gap: 1.875rem 2.5rem;
+}
+
+.our-friend-slider-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.our-friend-slider-nav-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+
+  border-radius: 50%;
+  border: var(--border);
+  border-color: var(--color-primary-light);
+
+  background: var(--color-primary-light);
+
+  transition: var(--transition-duration);
+}
+
+.our-friend-slider-button.inactive {
+  color: var(--color-dark-s);
+  border-color: var(--color-dark-s);
+}
+
+@media (any-hover: hover) {
+  .our-friend-slider-button.inactive:hover {
+    background: transparent;
+    border-color: var(--color-dark-s);
+  }
+}
